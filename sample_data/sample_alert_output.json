@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "application_id": 1,
+    "railway_feature_id": 1,
+    "match_type": "intersects",
+    "confidence": "HIGH",
+    "distance_meters": 0,
+    "evidence_text": "rule=intersects; distance_m=0.0; application_geom=Polygon; rail_geom=LineString; threshold=25.0"
+  }
+]

@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <title>Matches</title>
+  <style>body{font-family:Arial;margin:2rem;} table{border-collapse:collapse;width:100%;} th,td{border:1px solid #ddd;padding:8px;} .HIGH{background:#ffd9d9;} .MEDIUM{background:#fff4ce;} .LOW{background:#dff0ff;}</style>
+</head>
+<body>
+  <h1>Spatial Matches</h1>
+  <table>
+    <thead><tr><th>ID</th><th>Application</th><th>Railway Feature</th><th>Type</th><th>Confidence</th><th>Distance (m)</th><th>Detail</th></tr></thead>
+    <tbody>
+      {% for m in matches %}
+      <tr class="{{m.confidence}}"><td>{{m.id}}</td><td>{{m.application_id}}</td><td>{{m.railway_feature_id}}</td><td>{{m.match_type}}</td><td>{{m.confidence}}</td><td>{{'%.2f'|format(m.distance_meters or 0)}}</td><td><a href="/ui/matches/{{m.id}}">open</a></td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
