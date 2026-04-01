@@ -1,0 +1,34 @@
+[
+  {
+    "application_reference": "APP-001",
+    "authority": "AuthorityA",
+    "description": "Development crossing railway",
+    "address": "1 Station Road",
+    "postcode": "SW1A 1AA",
+    "status": "validated",
+    "application_type": "full",
+    "source_url": "https://example.org/app/1",
+    "geometry_wkt": "POLYGON((-0.102 51.498,-0.097 51.498,-0.097 51.502,-0.102 51.502,-0.102 51.498))"
+  },
+  {
+    "application_reference": "APP-002",
+    "authority": "AuthorityA",
+    "description": "Near rail but not intersecting",
+    "address": "2 Station Road",
+    "postcode": "SW1A 1AB",
+    "status": "received",
+    "application_type": "outline",
+    "source_url": "https://example.org/app/2",
+    "geometry_wkt": "POLYGON((-0.109 51.503,-0.108 51.503,-0.108 51.504,-0.109 51.504,-0.109 51.503))"
+  },
+  {
+    "application_reference": "APP-003",
+    "authority": "AuthorityB",
+    "description": "No geometry geocoded case",
+    "address": "3 Unknown Road",
+    "postcode": "SW1A 9ZZ",
+    "status": "received",
+    "application_type": "full",
+    "source_url": "https://example.org/app/3"
+  }
+]
