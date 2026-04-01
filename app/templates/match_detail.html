@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title>Match detail</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>body{font-family:Arial;margin:2rem;} #map{height:300px;} .panel{border:1px solid #ddd;padding:1rem;margin-top:1rem;}</style>
+</head>
+<body>
+  <h1>Match #{{match.id}}</h1>
+  <div id="map"></div>
+  <div class="panel">
+    <strong>Evidence:</strong> {{match.evidence_text}}<br/>
+    <strong>Confidence:</strong> {{match.confidence}}<br/>
+    <strong>Application Ref:</strong> {{application.application_reference}}
+  </div>
+  <div class="panel">
+    <strong>Review status:</strong> {{review.status if review else 'pending'}}
+    <p>{{review.reviewer_notes if review else ''}}</p>
+  </div>
+  <script>
+    const map = L.map('map').setView([51.5, -0.12], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+  </script>
+</body>
+</html>
