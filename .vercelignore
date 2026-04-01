@@ -1,0 +1,7 @@
+docker/
+migrations/
+sample_data/
+tests/
+architecture.md
+README.md
+.env.example
