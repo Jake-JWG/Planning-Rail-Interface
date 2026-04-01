@@ -24,11 +24,6 @@ dependencies = [
 pythonpath = ["."]
 addopts = "-q"
 
-[tool.setuptools]
-py-modules = []
-packages = ["app"]
-
-
 [build-system]
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
