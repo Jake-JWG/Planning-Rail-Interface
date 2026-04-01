@@ -27,7 +27,7 @@ This repository is configured for zero-manual Vercel Python deployment:
 - Entry point: `api/index.py` (exports FastAPI `app`)
 - Build/runtime config: `vercel.json`
 - Runtime dependencies are pinned in `requirements.txt` for Vercel installs (no manual setup.py edits needed).
-- Packaging is restricted to `app*` only in `pyproject.toml` to avoid flat-layout package discovery errors.
+- `pyproject.toml` now explicitly sets `packages = ["app"]` (no package auto-discovery), which permanently prevents flat-layout multi-package detection errors.
 
 ## Local run (without Docker)
 ```bash

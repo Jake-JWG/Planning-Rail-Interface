@@ -26,12 +26,8 @@ addopts = "-q"
 
 [tool.setuptools]
 py-modules = []
+packages = ["app"]
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["app*"]
-exclude = ["docker*", "migrations*", "sample_data*", "tests*", "api*"]
-namespaces = false
 
 [build-system]
 requires = ["setuptools>=68", "wheel"]
