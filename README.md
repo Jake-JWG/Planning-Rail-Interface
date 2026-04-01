@@ -21,16 +21,6 @@ docker compose -f docker/docker-compose.yml up --build
 API docs: `http://localhost:8000/docs`
 UI: `http://localhost:8000/`
 
-
-## Vercel deployment
-This repository is configured for zero-manual Vercel Python deployment:
-- Entry point: `api/index.py` (exports FastAPI `app` and loads code from `src/app`).
-- Build/runtime config: minimal `vercel.json` using only schema + `rewrites` (no legacy `builds` key).
-- Runtime dependencies are pinned in `requirements.txt` for Vercel installs (no manual setup.py edits needed).
-- Source code uses a `src/` layout (`src/app`) and `pyproject.toml` explicitly packages only `app`, preventing flat-layout multi-package discovery errors.
-- `pyproject.toml` now explicitly limits package discovery to `src/app` and excludes non-app folders (`api`, `docker`, `migrations`, `sample_data`, `tests`).
-- `.vercelignore` excludes non-runtime folders from deployment upload (`docker/`, `migrations/`, `sample_data/`, `tests/`).
-
 ## Local run (without Docker)
 ```bash
 python -m venv .venv
